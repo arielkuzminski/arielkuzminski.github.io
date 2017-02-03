@@ -1,0 +1,153 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* line 19, ../sass/style.scss */
+.header {
+  padding: 25px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #343a41;
+  color: white;
+  font-family: 'Open Sans';
+  width: 1200px;
+}
+/* line 28, ../sass/style.scss */
+.header a {
+  text-decoration: none;
+  color: white;
+}
+/* line 32, ../sass/style.scss */
+.header:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 39, ../sass/style.scss */
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 46, ../sass/style.scss */
+.glass {
+  margin-left: 10px;
+}
+
+/* line 50, ../sass/style.scss */
+.contentBox {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+}
+
+/* line 57, ../sass/style.scss */
+.content {
+  padding: 50px;
+  width: 75%;
+  line-height: 1.66em;
+  font-size: 21px;
+}
+
+/* line 65, ../sass/style.scss */
+.wpis h2 {
+  font-family: 'Open Sans';
+}
+
+/* line 69, ../sass/style.scss */
+.wpis img {
+  float: left;
+  padding: 15px;
+  width: 100px;
+}
+
+/* line 76, ../sass/style.scss */
+.menu {
+  width: 25%;
+  padding: 50px;
+  border-left: 1px dotted #343a41;
+  border-left-width: 5px;
+}
+
+/* line 84, ../sass/style.scss */
+.menuContent {
+  background-color: #f3f3f3;
+  position: fixed;
+  width: 275px;
+  -webkit-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.5);
+}
+/* line 89, ../sass/style.scss */
+.menuContent p {
+  text-align: center;
+  background-color: #343a41;
+  color: white;
+  font-family: Arial;
+  letter-spacing: 5px;
+  padding: 10px;
+  margin: 0;
+}
+/* line 101, ../sass/style.scss */
+.menuContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 106, ../sass/style.scss */
+.menuContent ul li {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+/* line 112, ../sass/style.scss */
+.menuContent ul li a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  margin: 0;
+}
+/* line 116, ../sass/style.scss */
+.menuContent ul li a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  font-weight: 700;
+  color: black;
+}
+/* line 122, ../sass/style.scss */
+.menuContent ul li a:visited {
+  text-decoration: none;
+}
+
+/* line 132, ../sass/style.scss */
+.pagination {
+  display: inline-block;
+}
+/* line 136, ../sass/style.scss */
+.pagination p {
+  display: inline-block;
+}
+/* line 140, ../sass/style.scss */
+.pagination ul {
+  display: inline-block;
+}
+/* line 145, ../sass/style.scss */
+.pagination ul li {
+  display: inline-block;
+}
+
+/* line 152, ../sass/style.scss */
+.footer {
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  font-family: 'Open Sans';
+  margin-top: 75px;
+  border-top: 1px dotted #343a41;
+  border-top-width: 5px;
+  width: 1200px;
+}

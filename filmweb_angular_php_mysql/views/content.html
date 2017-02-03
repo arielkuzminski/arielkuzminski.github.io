@@ -1,0 +1,92 @@
+<div class="container">
+            <div class="row">
+                <div class="col-md-6" >
+                    <div class="postContainer">
+                        
+                      <div class="page-header myMovieTitle">
+                          <h1> {{ current.mov.title }} </h1>
+                      </div>
+                        
+                      <div class="well">
+                          <img ng-src= "{{ current.mov.image }}" alt="obrazek" />
+                          <h4 class="description myMovieDesc"> Opis: {{ current.mov.description }} </h4>
+                          <p class="description myMovieDesc"> Czas trwania: {{ current.mov.lasts }} </p>
+                          <p class="description myMovieDesc"> Rok produkcji: {{ current.mov.year }} </p>
+                          <p class="description myMovieDesc"> Rodzaj: {{ current.mov.type }} </p> 
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="list-group">
+                      <a href="" class="list-group-item active filmy">
+                        Filmy
+                      </a>
+                      <a href="" class=list-group-item ng-repeat="(i, movie) in movies" ng-click="showMovie(i, movie)"> {{ movie.title }}</a>
+                        <ul class="pager">
+                            <div class="btn-group">
+                        
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sortuj<span class="caret"></span>
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="" ng-click="sortMovies('title')">Sortuj alfabetycznie</a></li>
+                                    <li><a href="" ng-click="sortMovies('year')">Sortuj chronologicznie</a></li>
+                                    <li><a href="" ng-click="sortMovies('last')">Sortuj wg długości filmu</a></li>
+                                    <li><a href="" ng-click="sortMovies('type')">Sortuj wg film/serial</a></li>
+                                </ul>
+                            </div>
+                                    <li><a href="" ng-click="previous()">Poprzedni</a></li>                            
+                                    <li><a href="" ng-click="next()">Następny</a></li>
+                        </ul>
+                    </div>
+                    
+                    <form>
+                    <div class="addMovie" ng-controller="AddMoviesController">
+                        
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1">Tytuł:</span>
+                          <input type="text" class="form-control" placeholder="Tytuł..." aria-describedby="basic-addon1" ng-model="movieTitle" required>
+                        </div>
+                        
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1">Opis:</span>
+                          <input type="text" class="form-control" placeholder="Opis..." aria-describedby="basic-addon1" ng-model="movieDesc" required>
+                        </div>
+                        
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1">Czas trwania:</span>
+                          <input type="text" class="form-control" placeholder="Czas trwania..." aria-describedby="basic-addon1" ng-model="movieDuration" required>
+                        </div>
+                        
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1">Rok produkcji:</span>
+                          <input type="text" class="form-control" placeholder="Rok produkcji..." aria-describedby="basic-addon1" ng-model="movieYear" required>
+                        </div>
+                        
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1">Link:</span>
+                          <input type="text" class="form-control" placeholder="Link do obrazka..." aria-describedby="basic-addon1" ng-model="movieImage">
+                        </div>
+                        
+                        <div class="bottom-container">
+                            <div class="input-group">Wybierz typ:
+                            <div class="radio">
+                              <label><input type="radio" name="type" value="movie" checked="checked" ng-model="movieType">Film</label>
+                            </div>
+                            <div class="radio">
+                              <label><input type="radio" name="type" value="show" ng-model="movieType">Serial</label>
+                            </div>
+                            </div>
+
+                            <button class="btn-primary dodaj" type="submit" ng-click="checkIfOk()">Dodaj</button>
+                        
+                        </div>
+                        
+                        
+                        
+                    </form>
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>

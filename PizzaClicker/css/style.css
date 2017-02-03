@@ -1,0 +1,231 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    
+    background: #FABE1D;
+    background: -moz-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 33%, rgba(248,181,0,1) 73%, rgba(251,223,147,1) 100%)fixed;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,234,187,1)), color-stop(33%, rgba(252,205,77,1)), color-stop(73%, rgba(248,181,0,1)), color-stop(100%, rgba(251,223,147,1)))fixed;
+    background: -webkit-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 33%, rgba(248,181,0,1) 73%, rgba(251,223,147,1) 100%)fixed;
+    background: -o-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 33%, rgba(248,181,0,1) 73%, rgba(251,223,147,1) 100%)fixed;
+    background: -ms-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 33%, rgba(248,181,0,1) 73%, rgba(251,223,147,1) 100%)fixed;
+    background: linear-gradient(to bottom, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 33%, rgba(248,181,0,1) 73%, rgba(251,223,147,1) 100%)fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=0 );
+
+}
+
+.container {
+    text-align: center;
+
+}
+
+.container h1 {
+    font-size: 50px;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+}
+
+.image {
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(0,0,0, 0.3);
+}
+
+
+.upgradesImages {
+    width: 50px;
+}
+
+#clicker {
+    width: 88%;
+    border-radius: 100%;
+}
+
+#clicker:hover {
+    cursor: pointer;
+    width: 86%;
+}
+
+#clicker:active {
+    cursor: pointer;
+    width: 90%;
+}
+
+.buttons {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 2px dashed rgba(0,0,0, 0.3);
+    text-align: left;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.upgradeText {
+    margin-left: 10px;
+    line-height: 10px;
+}
+
+.saveLoadButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+
+.button:hover {
+    transform: scale(1.1, 1.1);
+    
+}
+
+.button:disabled {
+    opacity: 0.2;
+    
+}
+
+
+.description {
+    font-size: 13px;
+    padding-left: 10px;
+    line-height: 10px;
+}
+
+.counter {
+    font-size: 25px;
+}
+
+.footer {
+    text-align: center;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    color: rgb(51, 51, 51);
+}
+
+#name {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.leaderboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leadearboard li {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.userScore {
+    text-align: center;
+}
+
+.userPosition,
+.userName {
+    text-align: center;
+}
+
+.userPosition > ol > {
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #333;
+    float: right;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+
+    
+    .image {
+        max-width: 300px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .image {
+        width: inherit;
+        height: 250px;
+    }
+    
+    .modal-content {
+        font-size: 13px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 300px) {
+    
+    .image {
+        width: inherit;
+        height: 200px;
+    }
+    
+    
+    
+}

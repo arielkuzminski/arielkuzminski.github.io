@@ -1,0 +1,162 @@
+$header-bg-color: #343a41; // użycie zmiennej
+$menu-bg-color: rgb(243,243,243);
+
+
+@mixin ramka () { // użycie mixin
+  border: 1px solid lightgrey;
+}
+
+@mixin domyslny-format () {
+  padding: 25px;
+  margin: 10px;
+}
+
+
+.page {
+  //@include ramka; // użycie include
+}
+
+.header {
+  @include domyslny-format;
+  //@include ramka;
+  display: flex;
+  justify-content: space-between;
+  background-color: $header-bg-color;
+  color: white;
+  font-family: 'Open Sans';
+  
+  a {
+      text-decoration: none;
+      color: white;
+  }
+  &:visited {
+      text-decoration: none;
+      color: white;
+  }
+  
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass {
+    margin-left: 10px;
+}
+
+.contentBox {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  //@include ramka;
+}
+
+.content {
+  padding: 50px;
+  width: 75%;
+  line-height: 1.66em;
+  font-size: 21px;
+  //@include ramka;
+}
+
+.wpis h2 {
+    font-family: 'Open Sans';
+}
+
+.wpis img {
+    float: left;
+    padding: 15px;
+    width: 100px;
+}
+
+
+.menu {
+  width: 25%;
+  padding: 50px;
+  border-left: 1px dotted $header-bg-color;
+  border-left-width: 5px;
+  
+}
+
+.menuContent {
+  background-color: $menu-bg-color;
+  
+  
+  
+  p {   // ZAGNIEŻDŻANIE //
+      text-align: center;
+      background-color: $header-bg-color;
+      color: white;
+      font-family: Arial;
+      letter-spacing: 5px;
+      padding: 10px;
+      margin: 0;
+      
+      
+  }
+  
+  ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+        
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+        
+      a {
+          color: rgba(0,0,0,0.6);
+          text-decoration: none;
+          margin: 0;
+          &:hover {
+              text-decoration: none;
+              opacity: 0.8;
+              font-weight: 700;
+              color: black;
+          }
+          &:visited {
+              text-decoration: none;
+          }
+          
+      }
+    }
+  }
+  
+}
+
+.pagination { // ZAGNIEŻDŻANIE //
+    
+    display: inline-block;
+    
+    p {
+        display: inline-block;
+    }
+    
+    ul {
+        
+        display: inline-block;
+        
+        
+        li {
+            display: inline-block;
+        }
+       
+    }
+}
+
+.footer {
+  //@include ramka;
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  font-family: 'Open Sans';
+  margin-top: 75px;
+  border-top: 1px dotted $header-bg-color;
+  border-top-width: 5px;
+  
+}

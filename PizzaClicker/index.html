@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>No pizza</title>
+    
+<!--    FAV ICONY  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/manifest.json">
+    <link rel="mask-icon" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/favicon.ico">
+    <meta name="msapplication-config" content="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+<!--    -->
+    <!--    
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	-->
+	<link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet">
+    
+</head>
+<body>
+<div class="container">
+    
+    <h1>PIZZA CLICKER</h1>
+    
+    <div class="col-lg-4 col-lg-push-4 col-sm-12">
+        <div class="image">
+            <a><img id="clicker" src="img/pizza.svg"/></a>
+        </div>
+        <p>You've got: <span class='counter' id="counter"></span> pizzas!</p>
+        <p>(<span id='perSec'></span> per/second)</p>
+        <p>(<span id='perClick'></span> per/click)</p>
+        <p>TOTAL SCORE: <span id='score'></span></p>
+        <input type="email" class="form-control" id="name" placeholder="Your name for Highscores" maxlength="12">
+    </div>
+    
+    <div class="col-lg-4  col-sm-6 col-lg-pull-4">   
+        <div class="buttons">
+            <div class="moreClicks">
+                <div class="moreClick cursor">
+                    <button type="button" class="btn btn-default button upgrades" id="cursor" ><img class="upgradesImages" src="img/cursor.svg"></button> Costs: <span id="cursor-value"></span>
+                    <p class="description">'Make delicious pizza faster.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="cursorCount"></span> additional clicks!</p>
+                </div>
+                <div class="moreClick rollingPin">
+                    <button type="button" class="btn btn-default button upgrades" id="rollingPin" ><img class="upgradesImages" src="img/walek.png"></button> Costs: <span id="rollingPin-value"></span>
+                    <p class="description">'Hurry up pizzerman! Customers are waiting!'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="rollingPinCount"></span> additional clicks!</p>
+                </div>
+                <div class="moreClick pizzaBox">
+                    <button type="button" class="btn btn-default button upgrades" id="pizzaBox" ><img class="upgradesImages" src="img/box.png"></button> Costs: <span id="pizzaBox-value"></span>
+                    <p class="description">'New boxes keep pizza warm for longer.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="pizzaBoxCount"></span> additional clicks!</p>
+                </div>
+                <div class="moreClick briefcase">
+                    <button type="button" class="btn btn-default button upgrades" id="briefcase" ><img class="upgradesImages" src="img/briefcase.png"></button> Costs: <span id="briefcase-value"></span>
+                    <p class="description">'You're becoming a bussiness shark!</p>
+                    <p class="upgradeText">You've got <span class='counter' id="briefcaseCount"></span> additional clicks!</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 col-sm-6">
+        <div class="buttons">
+            <div class="autoClicks">
+                <div class="autoClick pizzerman">
+                    <button type="button" class="btn btn-default button upgrades" id="pizzerman" >Pizzerman</button> Costs: <span id="pizzerman-value"></span>
+                    <p class="description">'Let the others do your job.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="pizzaViewCount"></span> Pizzermen</p>
+                </div>
+                <div class="autoClick waitress">
+                    <button type="button" class="btn btn-default button upgrades" id="waitress" >Waitress</button> Costs: <span id="waitress-value"></span>
+                    <p class="description">'We want your tips!'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="waitressViewCount"></span> Waitresses</p>
+                </div>
+                <div class="autoClick deliveryboy">
+                    <button type="button" class="btn btn-default button upgrades" id="deliveryboy" >Delivery Boy</button> Costs: <span id="deliveryboy-value"></span>
+                    <p class="description">'Delicious pizza for everyone in the city.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="deliveryboyViewCount"></span> Delivery Boys</p>
+                </div>
+                <div class="autoClick manager">
+                    <button type="button" class="btn btn-default button upgrades" id="manager" >Manager</button> Costs: <span id="manager-value"></span>
+                    <p class="description">'Through management to success.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="managerViewCount"></span> Managers</p>
+                </div>
+                <div class="autoClick godfather">
+                    <button type="button" class="btn btn-default button upgrades" id="godfather" >Godfather</button> Costs: <span id="godfather-value"></span>
+                    <p class="description">'Pizza is a dish that tastes best when served hot.'</p>
+                    <p class="upgradeText">You've got <span class='counter' id="godfatherViewCount"></span> Godfathers</p>
+                </div>
+            </div>
+            <div class="saveLoadButtons">
+                <button class="btn btn-success button" id="save">Save</button>
+                <button class="btn btn-warning button" id="load">Load</button>
+                <button class="btn btn-danger button" id="reset">RESET</button>
+                <div class="dropup">
+                  <button class="btn btn-primary dropdown-toggle button" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Themes
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href="#" id='fancy'>fancy</a></li>
+                    <li><a href="#" id='minimalistic'>minimalistic</a></li>
+                    <li><a href="#" id='dark'>dark</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" id='currentColor'>fancy</a></li>
+                  </ul>
+                </div> 
+                
+                <button class="btn btn-primary button" id="myBtn">Highscores</button>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                      <p></p>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+<div class="footer">
+    MADE WITH &hearts; by Ariel Kuzminski &copy; 2016
+</div>
+<!--
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+-->
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+    
+<script src="./js/app.js"></script>
+<script src="./js/ajax.js"></script>
+    
+</body>
+</html>

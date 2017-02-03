@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Excercise</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+  <body>
+      
+      <div class="container">
+          
+        <h1>Witaj</h1>
+    
+          <div class="validateForm">
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">NIP:</span>
+              <input type="text" class="form-control" placeholder="NIP" aria-describedby="basic-addon1" required maxlength="10" id="nipInput" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">PESEL:</span>
+              <input type="text" class="form-control" placeholder="PESEL" aria-describedby="basic-addon1" required id="peselInput" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">REGON:</span>
+              <input type="text" class="form-control" placeholder="REGON" aria-describedby="basic-addon1" required id="regonInput"
+                     onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Telefon komórkowy:</span>
+              <input type="text" class="form-control" placeholder="format: 111222333" aria-describedby="basic-addon1" required id="telefonInput" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  maxlength="9">
+            </div>
+            
+            <button type="button" id="validateButton" class="btn btn-default">Sprawdź!</button>
+              
+        </div>
+        <br/>
+
+        <p>Przykładowy NIP: 5882337648</p>
+        <p>Przykładowy PESEL: 02070803628</p>
+        <p>Przykładowy REGON: 732065814</p>
+        <p>Przykładowy TELEFON: 500500500</p>
+          
+          
+      </div>
+      
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+  </body>
+</html>

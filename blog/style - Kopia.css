@@ -1,0 +1,52 @@
+.page {
+  border: 1px solid lightgrey;
+}
+
+.header {
+  padding: 50px;
+  margin: 10px;
+  border: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  background-color: #343a41;
+  color: white;
+  font-family: 'Open Sans';
+}
+
+.contentBox {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+}
+
+.content {
+  padding: 50px;
+  width: 75%;
+  line-height: 1.66em;
+  font-size: 21px;
+  border: 1px solid lightgrey;
+}
+
+.menu {
+  border: 1px solid lightgrey;
+  width: 25%;
+}
+.menu ul {
+  list-style: none;
+  background-color: blue;
+}
+.menu ul li {
+  background-color: yellow;
+  text-decoration: none;
+}
+.menu ul li a {
+  text-decoration: none;
+  background-color: red;
+}
+
+.footer {
+  padding: 50px;
+  margin: 10px;
+  border: 1px solid lightgrey;
+}
