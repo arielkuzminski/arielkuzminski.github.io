@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>No pizza</title>
-    
+
 <!--    FAV ICONY  -->
     <link rel="apple-touch-icon" sizes="180x180" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/favicon-32x32.png" sizes="32x32">
@@ -18,20 +18,20 @@
     <meta name="msapplication-config" content="http://webpros.nazwa.pl/sda/pfigfront1/arikuz/PizzaClicker/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 <!--    -->
-    <!--    
+    <!--
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	-->
 	<link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet">
-    
+
 </head>
 <body>
 <div class="container">
-    
+
     <h1>PIZZA CLICKER</h1>
-    
+
     <div class="col-lg-4 col-lg-push-4 col-sm-12">
         <div class="image">
             <a><img id="clicker" src="img/pizza.svg"/></a>
@@ -42,8 +42,8 @@
         <p>TOTAL SCORE: <span id='score'></span></p>
         <input type="email" class="form-control" id="name" placeholder="Your name for Highscores" maxlength="12">
     </div>
-    
-    <div class="col-lg-4  col-sm-6 col-lg-pull-4">   
+
+    <div class="col-lg-4  col-sm-6 col-lg-pull-4">
         <div class="buttons">
             <div class="moreClicks">
                 <div class="moreClick cursor">
@@ -66,11 +66,11 @@
                     <p class="description">'You're becoming a bussiness shark!</p>
                     <p class="upgradeText">You've got <span class='counter' id="briefcaseCount"></span> additional clicks!</p>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
     <div class="col-lg-4 col-sm-6">
         <div class="buttons">
             <div class="autoClicks">
@@ -116,8 +116,8 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="#" id='currentColor'>fancy</a></li>
                   </ul>
-                </div> 
-                
+                </div>
+
                 <button class="btn btn-primary button" id="myBtn">Highscores</button>
                 <div id="myModal" class="modal">
                   <div class="modal-content">
@@ -125,13 +125,13 @@
                       <p></p>
                   </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
 </div>
-    
+
 <div class="footer">
     MADE WITH &hearts; by Ariel Kuzminski &copy; 2016
 </div>
@@ -142,10 +142,23 @@
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
-    
 <script src="./js/app.js"></script>
 <script src="./js/ajax.js"></script>
-    
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAMapOtLTEc9C4slQx-HytjbIiHZ0QLx_0",
+    authDomain: "pizza-clicker-test.firebaseapp.com",
+    databaseURL: "https://pizza-clicker-test.firebaseio.com",
+    projectId: "pizza-clicker-test",
+    storageBucket: "pizza-clicker-test.appspot.com",
+    messagingSenderId: "122487806190"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </body>
 </html>
